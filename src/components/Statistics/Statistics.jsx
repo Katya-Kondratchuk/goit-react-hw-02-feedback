@@ -4,9 +4,15 @@ import { StatisticsStyled } from './Statistics.styled';
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <StatisticsStyled>
-      <span>Good: {good}</span>
-      <span>Neutral: {neutral}</span>
-      <span>Bad: {bad}</span>
+      <span>
+        Good: <span className="good">{good}</span>
+      </span>
+      <span>
+        Neutral: <span className="neutral">{neutral}</span>
+      </span>
+      <span>
+        Bad: <span className="bad">{bad}</span>
+      </span>
       <span>Total: {total}</span>
       <span>Positive feedback: {positivePercentage}%</span>
     </StatisticsStyled>

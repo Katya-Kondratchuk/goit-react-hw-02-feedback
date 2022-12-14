@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StatisticsStyled = styled.div`
   display: flex;
   flex-direction: column;
-  color: #4800ff;
+  color: #320f8c;
   font-style: italic;
   font-weight: bold;
   text-align: start;
@@ -11,5 +11,17 @@ export const StatisticsStyled = styled.div`
 
   span:not(:last-child) {
     margin-bottom: 15px;
+  }
+
+  .good {
+    color: green;
+  }
+
+  .bad {
+    color: red;
+  }
+
+  .neutral {
+    color: yellow;
   }
 `;
