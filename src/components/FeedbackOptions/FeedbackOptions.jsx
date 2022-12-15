@@ -6,20 +6,10 @@ import { SiFacepunch } from 'react-icons/si';
 import { ButtonsStyled } from './FeedbackOptons.styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-  const switchImg = name => {
-    switch (name) {
-      case 'bad':
-        return <ImSad2 color="red" />;
-
-      case 'good':
-        return <FaSmile color="green" />;
-
-      case 'neutral':
-        return <BsFillEmojiNeutralFill color="yellow" />;
-
-      default:
-        return <SiFacepunch />;
-    }
+  const images = {
+    bad: <ImSad2 color="#a30909" />,
+    good: <FaSmile color="#1ae80f" />,
+    neutral: <BsFillEmojiNeutralFill color="#f8cc0a" />,
   };
 
   return (
@@ -29,8 +19,9 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
           key={index}
           type="button"
           onClick={() => onLeaveFeedback(name)}
+          name={name}
         >
-          <span>{switchImg(name)}</span>
+          {images[name] || <SiFacepunch />}
           {name}
         </ButtonsStyled>
       ))}

@@ -10,7 +10,7 @@ const Section = ({ title, children }) => {
   );
 };
 
-Notification.propTypes = {
+Section.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
